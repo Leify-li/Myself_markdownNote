@@ -1,4 +1,4 @@
-### Shell
+# Shell
 
 ##### 查看当前系统shell版本： ` echo $SHELL` 
 
@@ -8,7 +8,7 @@
 2. ` . jiaoben.sh` #脚本在当前目录下
 3. ` source jioaben.sh` 
 
-#### 变量
+#### 变量  <!-- more --> 
 
 **普通变量**
 
@@ -39,6 +39,8 @@ $ 变量
 
 ```
 
+
+
 ##### 取消变量(删除)
 
 ` unset 变量名` 
@@ -65,47 +67,61 @@ $?
 2. test 1=2
 ```
 
-##### diff 对比文件差异
+#### diff 对比文件差异
 
 >  diff   file1 file2可以对比两个文件file1和file2的差异。一般在对比时是以第二个文件为标准的。比如说2d1的意思是第一个文件第二行删除linux就会和第二个文件内容一致。1a2意思是说第一个文件添加linux内容就会与第二个文件内容一致。还会有比如2c2意思是第一个文件第二行改变内容就会和第二个文件的内容一致。
 > ------------------------------------------------
 
-![img](C:\Users\Administrator\Desktop\md分享\Myself_markdownNote\201806141601138)
+![201806141601138](image/Shell/201806141601138.png)
 
   diff 指令也可以用来对比两个**目录**的内容： 
 
-![img](C:\Users\Administrator\Desktop\md分享\Myself_markdownNote\image\20180614161242275)
+![20180614161242275](image/Shell/20180614161242275.png)
 
-#####   sort和uniq的使用： 
+####   sort和uniq的使用： 
 
-  统计文件中每个数字出现的个数：  左边为数字个数，右边为排序后的数字 ![img](C:\Users\Administrator\Desktop\md分享\Myself_markdownNote\image\20180614161734504)
+  统计文件中每个数字出现的个数：  左边为数字个数，右边为排序后的数字 ![20180614161734504](image/20180614161734504.png)
 
- 只显示唯一的数字： ![img](C:\Users\Administrator\Desktop\md分享\Myself_markdownNote\image\20180614161908335)
+ 只显示唯一的数字：
 
- 只显示重复的数字： ![img](C:\Users\Administrator\Desktop\md分享\Myself_markdownNote\image\20180614161936303)
+![20180614161908335](image/Shell/20180614161908335.png)
+
+ 只显示重复的数字：
+
+![20180614161936303](image/Shell/20180614161936303.png)
 
  **3. test指令：**
 
-**![img](C:\Users\Administrator\Desktop\md分享\Myself_markdownNote\image\2018061416211337)** 
+fo
 
-![img](C:\Users\Administrator\Desktop\md分享\Myself_markdownNote\image\20180614162134822)
+![2018061416211337](image/Shell/2018061416211337.png)
+
+
+
+![20180614162134822](image/Shell/20180614162134822.png)
 
 > 举例：test命令书写脚本比较数的大小
 
            其中-z用来判断是否从键盘收了数据$1,&&指前面的条件为真，就执行后面的指令。在第一行指令的意思是如果没有从键盘接收到$1数据，就执行后面的指令。与&&相对立的指令为||，意思是如果前面的条件为假，就执行||后面的指令：
 > ------------------------------------------------
 
-![img](C:\Users\Administrator\Desktop\md分享\Myself_markdownNote\image\20180614162304862)
+![20180614162304862](image/Shell/20180614162304862.png)
 
-![img](C:\Users\Administrator\Desktop\md分享\Myself_markdownNote\image\20180614162727711)
 
- **4.  tr指令：用来进行大小写字母的转换：** 
+
+ **4.  tr指令![20180614162727711](image/Shell/20180614162727711.png)：用来进行大小写字母的转换：** 
 
 >  举例：将从键盘接收的字母，以不区分大小写的方式判断其是否为hello.如果是，输出yes，如果不是，输出no。指令tr 'A-z'  'a-z'就是用来完成大写字母到小写字母的转换： 
 
-![img](C:\Users\Administrator\Desktop\md分享\Myself_markdownNote\image\20180614163538393)
 
-![img](C:\Users\Administrator\Desktop\md分享\Myself_markdownNote\image\20180614163743140)
+
+![20180614163538393](image/Shell/20180614163538393.png)
+
+
+
+![20180614163743140](image/Shell/20180614163743140.png)
+
+#### 循环判断
 
 ##### if语句
 
@@ -175,7 +191,7 @@ do
 done
 ```
 
-##### 函数
+#### 函数
 
 ```shell
 #定义函数/ 函数名自定义(dayin)
@@ -186,9 +202,7 @@ dayin(){
 dayin "$1"   #获取脚本的参数
 ```
 
-
-
-
+“”
 
 
 
